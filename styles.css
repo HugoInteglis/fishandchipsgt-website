@@ -1,8 +1,9 @@
 *{box-sizing:border-box}
 :root{
-  --turq:#19bfc2;
-  --turq-dark:#087d80;
-  --yellow:#ffd530;
+  --turq:#0a9ab4;
+  --turq-dark:#097082;
+  --blue-light:#30b1d8;
+  --yellow:#ffca03;
   --cream:#f6f1e7;
   --ink:#11100e;
   --white:#fff;
@@ -25,9 +26,11 @@ a{color:inherit;text-decoration:none}
   border-bottom:1px solid rgba(17,16,14,.1);
 }
 .brand{
+  display:flex;align-items:center;gap:10px;
   font-family:Anton,sans-serif;
   font-size:28px;letter-spacing:.5px;
 }
+.brand-logo{height:36px;width:auto;display:block}
 .brand-fish{color:var(--turq-dark)}
 .brand-amp{color:var(--yellow);padding:0 4px}
 .brand-chips{color:var(--turq)}
@@ -142,7 +145,7 @@ a{color:inherit;text-decoration:none}
 
 .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .location-card{padding:30px;border:2px solid var(--ink);background:white}
-.location-number{font-family:Anton,sans-serif;color:var(--turq);font-size:22px}
+.location-number{font-family:Anton,sans-serif;color:var(--blue-light);font-size:22px}
 .location-card h3{font-family:Anton,sans-serif;font-size:34px;margin:16px 0 5px}
 .location-card p{color:var(--muted)}
 .location-card a{display:inline-block;margin-top:28px;font-weight:900}
@@ -194,8 +197,8 @@ footer{
   display:flex;justify-content:space-between;gap:30px;align-items:end;
   padding:35px 6vw;background:var(--ink);color:white
 }
-.footer-brand{display:flex;flex-direction:column;gap:4px}
-.footer-brand span{font-family:Anton,sans-serif;font-size:30px;color:var(--yellow)}
+.footer-brand{display:flex;flex-direction:column;gap:10px}
+.footer-logo{height:52px;width:auto;display:block}
 .footer-brand small{opacity:.65}
 
 @media (max-width: 900px){
