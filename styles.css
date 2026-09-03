@@ -111,6 +111,7 @@ a{color:inherit;text-decoration:none}
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
+  align-items:start;
   gap:18px;
 }
 .menu-card{
@@ -126,6 +127,23 @@ a{color:inherit;text-decoration:none}
 .menu-card h3{font-family:Anton,sans-serif;font-size:31px;margin:10px 0}
 .menu-card p{line-height:1.5;color:#444}
 .tag{display:inline-block;font-size:10px;font-weight:900;letter-spacing:1.6px;background:var(--ink);color:white;padding:7px 9px}
+
+details.menu-card summary{
+  cursor:pointer;list-style:none;
+  display:flex;flex-direction:column;justify-content:space-between;height:100%;
+}
+details.menu-card summary::-webkit-details-marker{display:none}
+details.menu-card summary::after{
+  content:'+ VER TIPOS';
+  display:inline-block;margin-top:16px;
+  font-size:11px;font-weight:900;letter-spacing:1px;color:var(--turq-dark);
+}
+details.menu-card[open] summary::after{content:'– OCULTAR TIPOS'}
+.menu-card-options{margin-top:18px;padding-top:16px;border-top:2px solid var(--ink)}
+.menu-card-options p{margin:0 0 10px;font-weight:900;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.menu-card-options ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.menu-card-options li{display:flex;justify-content:space-between;gap:10px;font-size:14px;font-weight:600}
+.menu-card-options li span:last-child{font-family:Anton,sans-serif;color:var(--turq-dark);white-space:nowrap}
 
 .story{
   display:grid;grid-template-columns:1fr 1fr;
@@ -154,6 +172,7 @@ a{color:inherit;text-decoration:none}
 
 .menu-page{padding:60px 6vw 100px}
 
+.menu-page-empty{text-align:center}
 .menu-gallery{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
 .menu-gallery img{
   width:100%;display:block;
