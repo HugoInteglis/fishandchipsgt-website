@@ -111,7 +111,6 @@ a{color:inherit;text-decoration:none}
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  align-items:start;
   gap:18px;
 }
 .menu-card{
@@ -130,7 +129,7 @@ a{color:inherit;text-decoration:none}
 
 details.menu-card summary{
   cursor:pointer;list-style:none;
-  display:flex;flex-direction:column;justify-content:space-between;height:100%;
+  display:flex;flex-direction:column;justify-content:space-between;flex:1;
 }
 details.menu-card summary::-webkit-details-marker{display:none}
 details.menu-card summary::after{
