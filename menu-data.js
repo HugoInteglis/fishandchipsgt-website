@@ -7,6 +7,8 @@
   - Si un tipo no tiene foto, se muestra un espacio con el ícono y "Foto próximamente".
   - Para quitar una tarjeta de una sucursal, bórrala de la lista de esa sucursal.
   - Una sucursal con la lista vacía muestra "Menú próximamente".
+  - delivery: true muestra el aviso de delivery a Zona 15 y 16.
+  - pedidosYa: pega el enlace de la tienda para mostrar el botón "Pedir en PedidosYa".
 */
 
 const PHOTO = 'assets/menu-photos/';
@@ -48,6 +50,7 @@ const MENU_BRANCHES = [
     number: '01',
     name: 'Centro San Isidro',
     zone: 'Zona 16',
+    delivery: true,
     categories: [
       {
         id: 'fish-and-chips', icon: '🐟', title: 'Fish & Chips', tag: 'SIGNATURE', featured: true,
@@ -76,6 +79,8 @@ const MENU_BRANCHES = [
     number: '02',
     name: 'Fish2Go',
     zone: 'Zona 15',
+    delivery: true,
+    pedidosYa: '', // enlace de la tienda de Zona 15 en PedidosYa (pendiente)
     fullMenu: 'menu-zona15.html',
     categories: [
       {
