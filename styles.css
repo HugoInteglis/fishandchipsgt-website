@@ -292,16 +292,35 @@ body:has(.dish-dialog[open]){overflow:hidden}
 .merch-copy{padding:90px 7vw}
 .merch-copy h2{font-size:clamp(65px,8vw,120px)}
 .merch-copy p{font-size:18px;line-height:1.6;max-width:560px}
-.merch-visual{display:grid;place-items:center;background:var(--turq)}
-.shirt{
-  width:280px;height:320px;
-  clip-path:polygon(20% 0,35% 8%,65% 8%,80% 0,100% 25%,82% 38%,82% 100%,18% 100%,18% 38%,0 25%);
-  background:var(--ink);color:white;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  transform:rotate(-5deg);box-shadow:12px 12px 0 white;
+.merch-visual{display:grid;place-items:center;padding:60px 40px;background:var(--turq)}
+.merch-hero-photo{
+  width:min(360px,80%);aspect-ratio:2/3;object-fit:cover;display:block;
+  border:3px solid var(--ink);box-shadow:12px 12px 0 white;transform:rotate(-4deg);
 }
-.shirt span{font-family:Anton,sans-serif;font-size:70px;color:var(--yellow)}
-.shirt small{font-weight:900;letter-spacing:1px}
+
+.merch-products{
+  grid-column:1/-1;
+  display:grid;grid-template-columns:1fr 1fr;gap:28px;
+  padding:70px 6vw 90px;border-top:3px solid var(--ink);
+}
+.product-card{
+  display:flex;flex-direction:column;
+  background:white;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);
+}
+.product-gallery{border-bottom:3px solid var(--ink);display:flex;flex-direction:column}
+.product-main{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:3px solid var(--ink)}
+.product-thumbs{display:grid;grid-template-columns:repeat(3,1fr)}
+.product-thumbs button{padding:0;border:none;border-right:3px solid var(--ink);background:var(--ink);cursor:pointer;position:relative}
+.product-thumbs button:last-child{border-right:none}
+.product-thumbs img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;opacity:.55;transition:opacity .2s ease}
+.product-thumbs button:hover img,.product-thumbs button.active img{opacity:1}
+.product-thumbs button.active::after{content:'';position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--yellow)}
+.product-info{padding:26px 28px 30px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;flex:1}
+.product-info h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(28px,2.6vw,38px);line-height:1;margin:0}
+.product-details{list-style:none;margin:0;padding:0;width:100%;flex:1;display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+.product-details li{padding:10px 0;border-bottom:2px solid var(--ink);font-size:14px;line-height:1.4}
+.product-details b{display:block;font-size:10px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.product-info .btn{margin-top:6px}
 
 .catering-box{
   background:var(--ink);color:white;
@@ -345,6 +364,7 @@ footer{
   .branch-tab-name{font-size:20px}
   .story,.merch,.contact{grid-template-columns:1fr}
   .merch-visual{min-height:470px}
+  .merch-products{grid-template-columns:1fr}
   .catering-box{align-items:start;flex-direction:column}
 }
 @media (max-width: 600px){
@@ -374,7 +394,9 @@ footer{
   .dish-grid,.dish-list{grid-template-columns:1fr}
   .merch-copy{padding:75px 22px}
   .merch-visual{min-height:420px}
-  .shirt{width:230px;height:280px}
+  .merch-products{padding:50px 22px 70px;gap:24px}
+  .product-details{grid-template-columns:1fr}
+  .product-info{padding:22px 20px 26px}
   .catering-box{padding:30px 22px}
   footer{padding:30px 22px;align-items:start;flex-direction:column}
   .page-header{padding:60px 22px 40px}

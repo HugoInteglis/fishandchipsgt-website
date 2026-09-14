@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 </head>
@@ -118,14 +118,53 @@
       <div class="merch-copy">
         <p class="eyebrow">FISH STREETWEAR</p>
         <h2>MERCH<br>DROP</h2>
-        <p>Camisetas oversize, gorras y piezas limitadas inspiradas en la energía de Fish & Chips.</p>
-        <a class="btn btn-dark" href="#contacto">QUIERO VER EL DROP</a>
+        <p>Camisetas oversize con el sello Fish & Chips, para llevar la vibra del Street Food Club a donde vayas.</p>
+        <a class="btn btn-dark" href="#merch-productos">VER CAMISETAS</a>
       </div>
       <div class="merch-visual">
-        <div class="shirt">
-          <span>FISH</span>
-          <small>STREET FOOD CLUB</small>
-        </div>
+        <img class="merch-hero-photo" src="assets/merch/coleccion.jpg" alt="Camisetas Fish & Chips negra y blanca, vistas de espalda" loading="lazy" />
+      </div>
+
+      <div class="merch-products" id="merch-productos">
+        <article class="product-card">
+          <div class="product-gallery">
+            <img class="product-main" src="assets/merch/powered-by-espalda.jpg" alt="Camiseta blanca Powered By, espalda" loading="lazy" />
+            <div class="product-thumbs">
+              <button type="button" class="active" data-src="assets/merch/powered-by-espalda.jpg" data-alt="Camiseta blanca Powered By, espalda"><img src="assets/merch/powered-by-espalda.jpg" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/powered-by-frente.jpg" data-alt="Camiseta blanca Powered By, logo al frente"><img src="assets/merch/powered-by-frente.jpg" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/powered-by-puesta.jpg" data-alt="Camiseta blanca Powered By puesta"><img src="assets/merch/powered-by-puesta.jpg" alt="" loading="lazy" /></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="tag">BLANCA</span>
+            <h3>Camiseta Powered By</h3>
+            <ul class="product-details">
+              <li><b>Espalda</b><span>Mascota Fish & Chips “Powered by”</span></li>
+              <li><b>Frente</b><span>Logo Fish & Chips · Est. Guatemala</span></li>
+            </ul>
+            <a class="btn btn-primary" href="#contacto">LA QUIERO</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-gallery">
+            <img class="product-main" src="assets/merch/street-food-club-espalda.jpg" alt="Camiseta negra Street Food Club, espalda" loading="lazy" />
+            <div class="product-thumbs">
+              <button type="button" class="active" data-src="assets/merch/street-food-club-espalda.jpg" data-alt="Camiseta negra Street Food Club, espalda"><img src="assets/merch/street-food-club-espalda.jpg" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/street-food-club-frente.jpg" data-alt="Camiseta negra Street Food Club, logo al frente"><img src="assets/merch/street-food-club-frente.jpg" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/street-food-club-puesta.jpg" data-alt="Camiseta negra Street Food Club puesta"><img src="assets/merch/street-food-club-puesta.jpg" alt="" loading="lazy" /></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="tag">NEGRA</span>
+            <h3>Camiseta Street Food Club</h3>
+            <ul class="product-details">
+              <li><b>Espalda</b><span>Fish & Chips · Street Food Club · Est. Guatemala</span></li>
+              <li><b>Frente</b><span>Logo Fish & Chips · Street Food Club</span></li>
+            </ul>
+            <a class="btn btn-primary" href="#contacto">LA QUIERO</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -162,7 +201,7 @@
     <p>© <span id="year"></span> Fish & Chips. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
   <script src="menu-data.js?v=2"></script>
   <script src="menu.js?v=2"></script>
 </body>
