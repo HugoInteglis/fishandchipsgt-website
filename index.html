@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 </head>
@@ -20,6 +20,7 @@
     <nav class="nav">
       <a href="#menu">Menú</a>
       <a href="#ubicaciones">Ubicaciones</a>
+      <a href="#delivery">Delivery</a>
       <a href="#merch">Merch</a>
       <a href="#catering">Catering</a>
       <a href="#contacto">Contacto</a>
@@ -64,7 +65,6 @@
 
       <p class="branch-label">ELIGE TU SUCURSAL</p>
       <div class="branch-tabs"></div>
-      <div class="delivery-bar" hidden></div>
 
       <div class="menu-grid" aria-live="polite">
         <noscript><a class="btn btn-primary" href="menu-zona15.html">VER MENÚ ZONA 15</a></noscript>
@@ -92,25 +92,76 @@
 
       <div class="location-grid">
         <article class="location-card">
-          <div class="location-number">01</div>
-          <h3>Centro San Isidro</h3>
-          <p>Zona 16 · Guatemala</p>
-          <a href="#" aria-label="Abrir ubicación Centro San Isidro">VER MAPA ↗</a>
+          <div class="location-photo">
+            <span class="location-number">01</span>
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local Fish & Chips en Centro San Isidro" loading="lazy" /> -->
+            <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
+          </div>
+          <div class="location-body">
+            <h3>Centro San Isidro</h3>
+            <p class="location-zone">Zona 16 · Guatemala</p>
+            <p class="location-address">C.C. Centro San Isidro, Bulevar Acatán</p>
+            <a class="location-menu-link" href="?sucursal=san-isidro#menu">VER MENÚ →</a>
+          </div>
+          <div class="map-buttons">
+            <a class="map-btn map-google" href="https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Centro%20San%20Isidro%2C%20Zona%2016%2C%20Guatemala" target="_blank" rel="noopener">GOOGLE MAPS ↗</a>
+            <a class="map-btn map-waze" href="https://waze.com/ul?q=Centro%20Comercial%20Centro%20San%20Isidro%2C%20Zona%2016%2C%20Guatemala&navigate=yes" target="_blank" rel="noopener">WAZE ↗</a>
+          </div>
         </article>
 
         <article class="location-card">
-          <div class="location-number">02</div>
-          <h3>Fish2Go</h3>
-          <p>Zona 15 · Próximamente</p>
-          <a href="menu-zona15.html">VER MENÚ ↗</a>
+          <div class="location-photo">
+            <span class="location-number">02</span>
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local Fish2Go en Zona 15" loading="lazy" /> -->
+            <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
+          </div>
+          <div class="location-body">
+            <h3>Fish2Go</h3>
+            <p class="location-zone">Zona 15 · Guatemala</p>
+            <p class="location-address">Dirección exacta próximamente</p>
+            <a class="location-menu-link" href="?sucursal=zona15#menu">VER MENÚ →</a>
+          </div>
+          <div class="map-buttons">
+            <span class="map-btn is-pending">GOOGLE MAPS</span>
+            <span class="map-btn is-pending">WAZE</span>
+          </div>
         </article>
 
         <article class="location-card">
-          <div class="location-number">03</div>
-          <h3>The Court</h3>
-          <p>Antigua · Próximamente</p>
-          <a href="menu-antigua.html">VER MENÚ ↗</a>
+          <div class="location-photo">
+            <span class="location-number">03</span>
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local The Court en Antigua" loading="lazy" /> -->
+            <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
+          </div>
+          <div class="location-body">
+            <h3>The Court</h3>
+            <p class="location-zone">Antigua Guatemala</p>
+            <p class="location-address">Dirección exacta próximamente</p>
+            <a class="location-menu-link" href="?sucursal=antigua#menu">VER MENÚ →</a>
+          </div>
+          <div class="map-buttons">
+            <span class="map-btn is-pending">GOOGLE MAPS</span>
+            <span class="map-btn is-pending">WAZE</span>
+          </div>
         </article>
+      </div>
+
+      <div class="delivery-box" id="delivery">
+        <div class="delivery-title">
+          <span class="delivery-icon">🛵</span>
+          <div>
+            <p class="eyebrow">TE LO LLEVAMOS</p>
+            <h3>DELIVERY</h3>
+          </div>
+        </div>
+        <div class="delivery-zones">
+          <p>Hacemos delivery a:</p>
+          <div class="zone-chips"><span>ZONA 15</span><span>ZONA 16</span></div>
+        </div>
+        <div class="delivery-apps">
+          <p>Zona 15 también en</p>
+          <span class="delivery-badge">PEDIDOSYA</span>
+        </div>
       </div>
     </section>
 
@@ -202,7 +253,7 @@
   </footer>
 
   <script src="script.js?v=3"></script>
-  <script src="menu-data.js?v=2"></script>
-  <script src="menu.js?v=2"></script>
+  <script src="menu-data.js?v=3"></script>
+  <script src="menu.js?v=3"></script>
 </body>
 </html>

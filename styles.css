@@ -144,19 +144,6 @@ a{color:inherit;text-decoration:none}
 .branch-tab-zone{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
 .branch-tab[aria-pressed="true"] .branch-tab-zone{color:var(--ink)}
 
-/* Aviso de delivery */
-.delivery-bar{
-  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
-  margin:-12px 0 30px;padding:14px 20px;
-  background:var(--ink);color:white;border:2px solid var(--ink);
-}
-.delivery-bar[hidden]{display:none}
-.delivery-icon{font-size:30px;line-height:1}
-.delivery-bar p{margin:0;font-size:16px;flex:1;min-width:200px}
-.delivery-bar strong{font-family:Anton,sans-serif;font-weight:400;font-size:20px;letter-spacing:.5px;text-transform:uppercase;color:var(--yellow);margin-right:4px}
-.delivery-badge{font-size:11px;font-weight:900;letter-spacing:1.5px;padding:8px 12px;background:var(--yellow);color:var(--ink)}
-.delivery-btn{padding:10px 16px;font-size:13px;background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
-
 /* Tarjetas del menú (botones) */
 button.menu-card{
   font:inherit;color:inherit;text-align:left;cursor:pointer;
@@ -258,11 +245,56 @@ body:has(.dish-dialog[open]){overflow:hidden}
 .big-quote{font-family:Anton,sans-serif;font-size:clamp(40px,5vw,78px);line-height:.95;color:var(--yellow)}
 
 .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.location-card{padding:30px;border:2px solid var(--ink);background:white}
-.location-number{font-family:Anton,sans-serif;color:var(--blue-light);font-size:22px}
-.location-card h3{font-family:Anton,sans-serif;font-size:34px;margin:16px 0 5px}
-.location-card p{color:var(--muted)}
-.location-card a{display:inline-block;margin-top:28px;font-weight:900}
+.location-card{
+  display:flex;flex-direction:column;
+  border:2px solid var(--ink);background:white;box-shadow:5px 5px 0 rgba(17,16,14,.9);
+}
+.location-photo{position:relative;aspect-ratio:4/3;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--turq)}
+.location-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.location-photo-empty{
+  height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 12px,transparent 12px 24px),var(--turq);
+}
+.location-photo-empty span{font-size:48px;line-height:1}
+.location-photo-empty small{font-size:10px;font-weight:900;letter-spacing:1.5px;background:var(--ink);color:white;padding:5px 8px}
+.location-number{
+  position:absolute;top:14px;left:14px;z-index:1;
+  font-family:Anton,sans-serif;font-size:22px;line-height:1;padding:7px 10px;
+  background:var(--yellow);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);
+}
+.location-body{padding:24px 26px 22px;flex:1}
+.location-card h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:34px;line-height:1;margin:0 0 8px}
+.location-zone{margin:0;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--turq-dark)}
+.location-address{margin:8px 0 0;color:var(--muted);line-height:1.5}
+.location-menu-link{display:inline-block;margin-top:16px;font-weight:900;font-size:13px;letter-spacing:1px;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.location-menu-link:hover{color:var(--turq-dark);border-color:var(--turq-dark)}
+.map-buttons{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.map-btn{
+  display:flex;align-items:center;justify-content:center;padding:14px 10px;
+  font-weight:900;font-size:12px;letter-spacing:1px;transition:background .2s ease;
+}
+.map-btn + .map-btn{border-left:2px solid var(--ink)}
+.map-google{background:white}
+.map-google:hover{background:var(--yellow)}
+.map-waze{background:var(--blue-light)}
+.map-waze:hover{background:var(--yellow)}
+.map-btn.is-pending{color:#a9a69e;background:#f1eee7;cursor:not-allowed}
+
+.delivery-box{
+  margin-top:40px;padding:28px 32px;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px 40px;
+  background:var(--ink);color:white;box-shadow:8px 8px 0 var(--yellow);
+  scroll-margin-top:130px;
+}
+.delivery-title{display:flex;align-items:center;gap:16px}
+.delivery-icon{font-size:52px;line-height:1}
+.delivery-title .eyebrow{margin:0;color:var(--yellow)}
+.delivery-title h3{font-family:Anton,sans-serif;font-size:clamp(44px,5vw,64px);line-height:.9;margin:4px 0 0}
+.delivery-zones p,.delivery-apps p{margin:0 0 10px;font-weight:700;color:rgba(255,255,255,.75)}
+.zone-chips{display:flex;gap:10px;flex-wrap:wrap}
+.zone-chips span{font-family:Anton,sans-serif;font-size:24px;padding:6px 14px;border:2px solid white}
+.delivery-apps{text-align:right}
+.delivery-badge{display:inline-block;font-family:Anton,sans-serif;font-size:24px;padding:6px 14px;background:var(--yellow);color:var(--ink)}
 
 .page-header{padding:70px 6vw 50px;background:var(--turq)}
 .back-link{display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
@@ -360,6 +392,8 @@ footer{
   .hero{grid-template-columns:1fr;padding-top:80px;padding-bottom:120px}
   .hero-card{justify-self:start;margin-top:60px}
   .menu-grid,.location-grid{grid-template-columns:1fr 1fr}
+  .delivery-box{grid-template-columns:1fr 1fr}
+  .delivery-title{grid-column:1/-1}
   .dish-grid{grid-template-columns:1fr 1fr}
   .branch-tab-name{font-size:20px}
   .story,.merch,.contact{grid-template-columns:1fr}
@@ -375,10 +409,9 @@ footer{
   .hero-copy{font-size:17px}
   .section,.story,.contact{padding:75px 22px}
   .menu-grid,.location-grid{grid-template-columns:1fr}
+  .delivery-box{grid-template-columns:1fr;padding:24px 22px}
+  .delivery-apps{text-align:left}
   .branch-tabs{gap:8px;margin-bottom:26px}
-  .delivery-bar{margin:-10px 0 24px;padding:12px 14px;gap:10px 12px}
-  .delivery-bar p{font-size:14px;min-width:0}
-  .delivery-bar strong{font-size:17px}
   .branch-tab{grid-template-columns:1fr;padding:10px 10px 12px;align-content:start}
   .branch-tab[aria-pressed="true"]{box-shadow:3px 3px 0 var(--ink)}
   .branch-tab-number{display:none}

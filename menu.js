@@ -1,7 +1,6 @@
 (() => {
   const tabs = document.querySelector('.branch-tabs');
   const grid = document.querySelector('.menu-grid');
-  const deliveryBar = document.querySelector('.delivery-bar');
   const dialog = document.querySelector('.dish-dialog');
   if (!tabs || !grid || !dialog || typeof MENU_BRANCHES === 'undefined') return;
 
@@ -29,15 +28,6 @@
   function renderGrid() {
     tabs.querySelectorAll('.branch-tab').forEach(t => t.setAttribute('aria-pressed', String(t.dataset.branch === current.id)));
 
-    deliveryBar.hidden = !current.delivery;
-    if (current.delivery) {
-      deliveryBar.innerHTML = `
-        <span class="delivery-icon">🛵</span>
-        <p><strong>Hacemos delivery</strong> a Zona 15 y Zona 16.</p>
-        ${current.pedidosYa
-          ? `<a class="btn btn-dark delivery-btn" href="${current.pedidosYa}" target="_blank" rel="noopener">PEDIR EN PEDIDOSYA ↗</a>`
-          : current.pedidosYa === '' ? '<span class="delivery-badge">TAMBIÉN EN PEDIDOSYA</span>' : ''}`;
-    }
 
     if (!current.categories.length) {
       grid.innerHTML = `
