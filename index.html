@@ -5,19 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Fish & Chips Guatemala — Street Food Club. Menú, ubicaciones, merch, catering y contacto." />
   <title>Fish & Chips | Street Food Club</title>
+  <link rel="canonical" href="https://fishandchipsgt.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fish & Chips Guatemala" />
+  <meta property="og:locale" content="es_GT" />
+  <meta property="og:title" content="Fish & Chips | Street Food Club" />
+  <meta property="og:description" content="Fish & Chips, camarones y ceviches en Guatemala. Mira el menú de cada sucursal, delivery a Zona 15 y 16, merch y catering." />
+  <meta property="og:url" content="https://fishandchipsgt.com/" />
+  <meta property="og:image" content="https://fishandchipsgt.com/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0a9ab4" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Fish & Chips Guatemala",
+    "url": "https://fishandchipsgt.com/",
+    "logo": "https://fishandchipsgt.com/assets/img/logo-icon-512.png",
+    "image": "https://fishandchipsgt.com/assets/img/og-image.jpg",
+    "servesCuisine": ["Mariscos", "Fish and chips", "Ceviches"],
+    "hasMenu": "https://fishandchipsgt.com/menu-zona16.html",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Centro Comercial Centro San Isidro, Bulevar Acatán, Zona 16",
+      "addressLocality": "Ciudad de Guatemala",
+      "addressCountry": "GT"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="topbar">
     <a href="#inicio" class="brand" aria-label="Fish & Chips">
-      <img class="brand-logo" src="assets/img/logo-full.png" alt="Fish & Chips" />
+      <img class="brand-logo" src="assets/img/logo.webp" alt="Fish & Chips" width="281" height="200" />
     </a>
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <a href="#menu">Menú</a>
       <a href="#ubicaciones">Ubicaciones</a>
       <a href="#delivery">Delivery</a>
@@ -25,7 +55,7 @@
       <a href="#catering">Catering</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
   </header>
 
   <main>
@@ -43,7 +73,7 @@
 
       <div class="hero-card">
         <div class="hero-card-top">FISH FAVORITE</div>
-        <div class="food-visual">🐟🍟</div>
+        <div class="food-visual"><img src="assets/menu-photos/fish-and-chips.webp" alt="Fish and chips con papas y aderezo" width="900" height="900" fetchpriority="high" /></div>
         <h3>Classic Fish & Chips</h3>
         <p>Crujiente, dorado y hecho para repetir.</p>
       </div>
@@ -94,7 +124,7 @@
         <article class="location-card">
           <div class="location-photo">
             <span class="location-number">01</span>
-            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local Fish & Chips en Centro San Isidro" loading="lazy" /> -->
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.webp" alt="Local Fish & Chips en Centro San Isidro" loading="lazy" /> -->
             <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
           </div>
           <div class="location-body">
@@ -112,7 +142,7 @@
         <article class="location-card">
           <div class="location-photo">
             <span class="location-number">02</span>
-            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local Fish2Go en Zona 15" loading="lazy" /> -->
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.webp" alt="Local Fish2Go en Zona 15" loading="lazy" /> -->
             <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
           </div>
           <div class="location-body">
@@ -130,7 +160,7 @@
         <article class="location-card">
           <div class="location-photo">
             <span class="location-number">03</span>
-            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.jpg" alt="Local The Court en Antigua" loading="lazy" /> -->
+            <!-- Foto del local: reemplazar este bloque por <img src="assets/locales/ARCHIVO.webp" alt="Local The Court en Antigua" loading="lazy" /> -->
             <div class="location-photo-empty"><span>📍</span><small>FOTO DEL LOCAL PRÓXIMAMENTE</small></div>
           </div>
           <div class="location-body">
@@ -173,17 +203,17 @@
         <a class="btn btn-dark" href="#merch-productos">VER CAMISETAS</a>
       </div>
       <div class="merch-visual">
-        <img class="merch-hero-photo" src="assets/merch/coleccion.jpg" alt="Camisetas Fish & Chips negra y blanca, vistas de espalda" loading="lazy" />
+        <img class="merch-hero-photo" src="assets/merch/coleccion.webp" alt="Camisetas Fish & Chips negra y blanca, vistas de espalda" loading="lazy" />
       </div>
 
       <div class="merch-products" id="merch-productos">
         <article class="product-card">
           <div class="product-gallery">
-            <img class="product-main" src="assets/merch/powered-by-espalda.jpg" alt="Camiseta blanca Powered By, espalda" loading="lazy" />
+            <img class="product-main" src="assets/merch/powered-by-espalda.webp" alt="Camiseta blanca Powered By, espalda" loading="lazy" />
             <div class="product-thumbs">
-              <button type="button" class="active" data-src="assets/merch/powered-by-espalda.jpg" data-alt="Camiseta blanca Powered By, espalda"><img src="assets/merch/powered-by-espalda.jpg" alt="" loading="lazy" /></button>
-              <button type="button" data-src="assets/merch/powered-by-frente.jpg" data-alt="Camiseta blanca Powered By, logo al frente"><img src="assets/merch/powered-by-frente.jpg" alt="" loading="lazy" /></button>
-              <button type="button" data-src="assets/merch/powered-by-puesta.jpg" data-alt="Camiseta blanca Powered By puesta"><img src="assets/merch/powered-by-puesta.jpg" alt="" loading="lazy" /></button>
+              <button type="button" class="active" data-src="assets/merch/powered-by-espalda.webp" data-alt="Camiseta blanca Powered By, espalda"><img src="assets/merch/powered-by-espalda.webp" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/powered-by-frente.webp" data-alt="Camiseta blanca Powered By, logo al frente"><img src="assets/merch/powered-by-frente.webp" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/powered-by-puesta.webp" data-alt="Camiseta blanca Powered By puesta"><img src="assets/merch/powered-by-puesta.webp" alt="" loading="lazy" /></button>
             </div>
           </div>
           <div class="product-info">
@@ -199,11 +229,11 @@
 
         <article class="product-card">
           <div class="product-gallery">
-            <img class="product-main" src="assets/merch/street-food-club-espalda.jpg" alt="Camiseta negra Street Food Club, espalda" loading="lazy" />
+            <img class="product-main" src="assets/merch/street-food-club-espalda.webp" alt="Camiseta negra Street Food Club, espalda" loading="lazy" />
             <div class="product-thumbs">
-              <button type="button" class="active" data-src="assets/merch/street-food-club-espalda.jpg" data-alt="Camiseta negra Street Food Club, espalda"><img src="assets/merch/street-food-club-espalda.jpg" alt="" loading="lazy" /></button>
-              <button type="button" data-src="assets/merch/street-food-club-frente.jpg" data-alt="Camiseta negra Street Food Club, logo al frente"><img src="assets/merch/street-food-club-frente.jpg" alt="" loading="lazy" /></button>
-              <button type="button" data-src="assets/merch/street-food-club-puesta.jpg" data-alt="Camiseta negra Street Food Club puesta"><img src="assets/merch/street-food-club-puesta.jpg" alt="" loading="lazy" /></button>
+              <button type="button" class="active" data-src="assets/merch/street-food-club-espalda.webp" data-alt="Camiseta negra Street Food Club, espalda"><img src="assets/merch/street-food-club-espalda.webp" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/street-food-club-frente.webp" data-alt="Camiseta negra Street Food Club, logo al frente"><img src="assets/merch/street-food-club-frente.webp" alt="" loading="lazy" /></button>
+              <button type="button" data-src="assets/merch/street-food-club-puesta.webp" data-alt="Camiseta negra Street Food Club puesta"><img src="assets/merch/street-food-club-puesta.webp" alt="" loading="lazy" /></button>
             </div>
           </div>
           <div class="product-info">
@@ -246,14 +276,14 @@
 
   <footer>
     <div class="footer-brand">
-      <img class="footer-logo" src="assets/img/logo-full.png" alt="Fish & Chips" />
+      <img class="footer-logo" src="assets/img/logo-footer.webp" alt="Fish & Chips" width="309" height="220" loading="lazy" />
       <small>STREET FOOD CLUB · GUATEMALA · SINCE 2019</small>
     </div>
     <p>© <span id="year"></span> Fish & Chips. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="script.js?v=3"></script>
-  <script src="menu-data.js?v=4"></script>
+  <script src="script.js?v=4"></script>
+  <script src="menu-data.js?v=5"></script>
   <script src="menu.js?v=3"></script>
 </body>
 </html>

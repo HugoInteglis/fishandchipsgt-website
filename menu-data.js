@@ -28,14 +28,14 @@ const CEVICHES = [
   { name: 'Mazatlán', desc: 'A base de pepino, cebolla morada picada, camote, elote y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Mexicano', desc: 'A base de jugos cítricos, cebolla morada en juliana, cilantro, tomate, jalapeño y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Veracruzano', desc: 'A base de jugos cítricos, cebolla morada en juliana, cilantro y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
-  { name: 'Aguachile negro', desc: 'A base de salsas negras, pepino, cebolla morada y aguacate.', photo: PHOTO + 'aguachile-negro.jpg', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] },
-  { name: 'Ceviche de macha', desc: 'A base de cebolla morada, cebolla blanca, aguacate, manías y salsa macha.', photo: PHOTO + 'ceviche-macha.jpg', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] }
+  { name: 'Aguachile negro', desc: 'A base de salsas negras, pepino, cebolla morada y aguacate.', photo: PHOTO + 'aguachile-negro.webp', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] },
+  { name: 'Ceviche de macha', desc: 'A base de cebolla morada, cebolla blanca, aguacate, manías y salsa macha.', photo: PHOTO + 'ceviche-macha.webp', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] }
 ];
 
 const CEVICHES_NOTA = 'Acompañados de picante, galletas o tostada horneada. Mariscos a tu elección: camarón, pulpo, cangrejo y pescado. Vegetariano con proteína de champiñón.';
 
-const FISH_AND_CHIPS = { name: 'Fish and chips', desc: 'Filete de pescado dorado empanizado.', price: 'Q69', photo: PHOTO + 'fish-and-chips.jpg' };
-const CAMARONES_EMPANIZADOS = { name: 'Camarones empanizados', desc: '½ libra de camarones empanizados.', price: 'Q89', photo: PHOTO + 'camarones-empanizados.jpg' };
+const FISH_AND_CHIPS = { name: 'Fish and chips', desc: 'Filete de pescado dorado empanizado.', price: 'Q69', photo: PHOTO + 'fish-and-chips.webp' };
+const CAMARONES_EMPANIZADOS = { name: 'Camarones empanizados', desc: '½ libra de camarones empanizados.', price: 'Q89', photo: PHOTO + 'camarones-empanizados.webp' };
 const CAMARONES_AJILLO = { name: 'Camarones al ajillo', desc: '½ libra de camarones al ajillo.', price: 'Q89' };
 const CAMARONES_DIABLA = { name: 'Camarones a la diabla', desc: 'A base de chiles, acompañado de guarnición a su elección.', price: 'Q99' };
 const CAMARONES_CHIPOTLE = { name: 'Camarones al chipotle', desc: '½ libra de camarones al sartén con salsa chipotle a base de crema y queso provolone.', price: 'Q99' };
@@ -64,7 +64,7 @@ const MENU_BRANCHES = [
         id: 'para-empezar', icon: '🌶️', title: 'Para empezar',
         desc: 'Tostones, tostadas y entradas para compartir.',
         items: [
-          { name: 'Chiles jalapeños', desc: 'Envueltos con tocino y empanizados.', price: 'Q139', photo: PHOTO + 'chiles-jalapenos.jpg' },
+          { name: 'Chiles jalapeños', desc: 'Envueltos con tocino y empanizados.', price: 'Q139', photo: PHOTO + 'chiles-jalapenos.webp' },
           { name: 'Tostones', desc: 'Cama de tostones de la casa con base de mayonesa, pico de gallo y jalapeño, coronado con marisco, aguacate y lechuga.', options: [['Cangrejo', 'Q50'], ['Camarón', 'Q50'], ['Pulpo', 'Q55'], ['Pescado', 'Q55'], ['Super mixto', 'Q69']] },
           { name: 'Tostada Chapina', desc: 'Base de mayonesa de la casa, cubierta con pico de gallo, jalapeño y coronada con aguacate y lechuga.', options: MARISCOS_TOSTADA },
           { name: 'Tostada Veracruzana', desc: 'Base de aguacate, cubierta con chipotle, pepino y cebolla morada en juliana.', options: MARISCOS_TOSTADA },
@@ -100,7 +100,7 @@ const MENU_BRANCHES = [
         desc: 'Bocado del pescador, canoas, caldos y más.',
         note: 'Los platillos se venden únicamente en restaurante.',
         items: [
-          { name: 'Bocado del pescador', desc: 'Fumet de mariscos condimentado con crema de leche y especias de la casa, servido en pan artesanal de masa madre.', price: 'Q189', photo: PHOTO + 'bocado-del-pescador.jpg' },
+          { name: 'Bocado del pescador', desc: 'Fumet de mariscos condimentado con crema de leche y especias de la casa, servido en pan artesanal de masa madre.', price: 'Q189', photo: PHOTO + 'bocado-del-pescador.webp' },
           { name: 'Bocado del pescador mixto', price: 'Q239' },
           CAMARONES_DIABLA,
           CAMARONES_CHIPOTLE,
@@ -130,7 +130,7 @@ const MENU_BRANCHES = [
         id: 'bebidas', icon: '🥤', title: 'Bebidas',
         desc: 'Naturales, sodas artesanales y calientes.',
         compact: true,
-        photo: PHOTO + 'bebidas-naturales.jpg',
+        photo: PHOTO + 'bebidas-naturales.webp',
         items: [
           { name: 'Limonada natural', desc: 'Agua o soda.', price: 'Q15' },
           { name: 'Naranjada', desc: 'Agua o soda.', price: 'Q15' },
