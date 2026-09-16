@@ -48,35 +48,7 @@ const MENU_BRANCHES = [
     number: '01',
     name: 'Centro San Isidro',
     zone: 'Zona 16',
-    categories: [
-      {
-        id: 'fish-and-chips', icon: '🐟', title: 'Fish & Chips', tag: 'SIGNATURE', featured: true,
-        desc: 'Pescado empanizado, papas crujientes y salsas de la casa.',
-        note: 'Acompañado de 1 guarnición y 1 aderezo a tu elección.',
-        items: [FISH_AND_CHIPS]
-      },
-      {
-        id: 'camarones', icon: '🍤', title: 'Camarones',
-        desc: 'Camarones dorados con acompañamiento y salsa.',
-        items: [CAMARONES_AJILLO, CAMARONES_EMPANIZADOS, CAMARONES_DIABLA, CAMARONES_CHIPOTLE]
-      },
-      {
-        id: 'ceviches', icon: '🥣', title: 'Ceviches',
-        desc: 'Opciones frescas de ½ lb y 1 lb.',
-        note: CEVICHES_NOTA,
-        items: CEVICHES
-      },
-      { id: 'chicken-fingers', icon: '🍗', title: 'Chicken Fingers', desc: 'Tiernos por dentro, crujientes por fuera.', items: [] },
-      { id: 'signature-burger', icon: '🍔', title: 'Signature Burger', desc: 'Una hamburguesa con identidad Fish.', items: [] },
-      { id: 'tostitos', icon: '🌶️', title: 'Tostitos con Camarón', desc: 'Pico de gallo, camarón y mucho crunch.', items: [] }
-    ]
-  },
-  {
-    id: 'zona15',
-    number: '02',
-    name: 'Fish2Go',
-    zone: 'Zona 15',
-    fullMenu: 'menu-zona15.html',
+    fullMenu: 'menu-zona16.html',
     categories: [
       {
         id: 'empanizados', icon: '🐟', title: 'Fish & Chips y empanizados', tag: 'SIGNATURE', featured: true,
@@ -209,6 +181,34 @@ const MENU_BRANCHES = [
           { name: 'Cervezas artesanales', desc: 'Antigua, Sin Novia, Muy Noble, Cervecería 14, Chelita Linda.', price: 'Q40' }
         ]
       }
+    ]
+  },
+  {
+    id: 'zona15',
+    number: '02',
+    name: 'Fish2Go',
+    zone: 'Zona 15',
+    categories: [
+      {
+        id: 'fish-and-chips', icon: '🐟', title: 'Fish & Chips', tag: 'SIGNATURE', featured: true,
+        desc: 'Pescado empanizado, papas crujientes y salsas de la casa.',
+        note: 'Acompañado de 1 guarnición y 1 aderezo a tu elección.',
+        items: [FISH_AND_CHIPS]
+      },
+      {
+        id: 'camarones', icon: '🍤', title: 'Camarones',
+        desc: 'Camarones dorados con acompañamiento y salsa.',
+        items: [CAMARONES_AJILLO, CAMARONES_EMPANIZADOS, CAMARONES_DIABLA, CAMARONES_CHIPOTLE]
+      },
+      {
+        id: 'ceviches', icon: '🥣', title: 'Ceviches',
+        desc: 'Opciones frescas de ½ lb y 1 lb.',
+        note: CEVICHES_NOTA,
+        items: CEVICHES
+      },
+      { id: 'chicken-fingers', icon: '🍗', title: 'Chicken Fingers', desc: 'Tiernos por dentro, crujientes por fuera.', items: [] },
+      { id: 'signature-burger', icon: '🍔', title: 'Signature Burger', desc: 'Una hamburguesa con identidad Fish.', items: [] },
+      { id: 'tostitos', icon: '🌶️', title: 'Tostitos con Camarón', desc: 'Pico de gallo, camarón y mucho crunch.', items: [] }
     ]
   },
   {
