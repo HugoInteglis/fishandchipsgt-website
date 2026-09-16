@@ -4,16 +4,42 @@ const nav = document.querySelector('.nav');
 const topbar = document.querySelector('.topbar');
 
 function setNavOpen(open) {
+  if (open) document.documentElement.style.setProperty('--topbar-h', `${topbar.getBoundingClientRect().bottom}px`);
   nav.classList.toggle('open', open);
   toggle.setAttribute('aria-expanded', String(open));
   toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  toggle.textContent = open ? '✕' : '☰';
 }
 
 toggle.addEventListener('click', () => setNavOpen(!nav.classList.contains('open')));
 
-document.querySelectorAll('.nav a').forEach(link => {
+nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => setNavOpen(false));
 });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && nav.classList.contains('open')) setNavOpen(false);
+});
+
+// Resalta en el menú la sección visible (solo en la página de inicio)
+const navTargets = [...nav.querySelectorAll(':scope > a[href^="#"]')]
+  .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+  .filter(t => t.section);
+let navTicking = false;
+function updateActiveNav() {
+  navTicking = false;
+  const line = topbar.offsetHeight + 60;
+  let active = null;
+  navTargets.forEach(t => { if (t.section.getBoundingClientRect().top <= line) active = t; });
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) active = navTargets[navTargets.length - 1];
+  navTargets.forEach(t => t.link.classList.toggle('is-active', t === active));
+}
+if (navTargets.length) {
+  window.addEventListener('scroll', () => {
+    if (!navTicking) { navTicking = true; requestAnimationFrame(updateActiveNav); }
+  }, { passive: true });
+  updateActiveNav();
+}
 
 const updateTopbar = () => topbar.classList.toggle('is-compact', window.scrollY > 40);
 window.addEventListener('scroll', updateTopbar, { passive: true });
