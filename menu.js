@@ -43,13 +43,17 @@
 
     grid.innerHTML = current.categories.map((c, i) => `
       <button class="menu-card${c.featured ? ' featured' : ''}" type="button" data-category="${c.id}" style="--i:${i}">
-        <div class="menu-icon">${c.icon}</div>
-        <div>
+        <div class="menu-card-media${c.cardPhoto ? '' : ' menu-card-media-empty'}">
+          ${c.cardPhoto
+            ? `<img src="${c.cardPhoto}" alt="${esc(c.title)}" width="900" height="675" loading="lazy">`
+            : `<span>${c.icon}</span>`}
+        </div>
+        <div class="menu-card-body">
           ${c.tag ? `<span class="tag">${esc(c.tag)}</span>` : ''}
           <h3>${esc(c.title)}</h3>
           <p>${esc(c.desc)}</p>
+          <span class="menu-card-cta">+ ${c.items.length ? `VER ${countLabel(c.items.length)}` : 'VER DETALLE'}</span>
         </div>
-        <span class="menu-card-cta">+ ${c.items.length ? `VER ${countLabel(c.items.length)}` : 'VER DETALLE'}</span>
       </button>`).join('') + (current.fullMenu ? `
       <a class="menu-full-link" href="${current.fullMenu}">VER EL MENÚ IMPRESO COMPLETO DE ${esc(current.zone.toUpperCase())} ↗</a>` : '');
   }

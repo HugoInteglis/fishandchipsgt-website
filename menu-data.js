@@ -5,11 +5,13 @@
   - Cada sucursal tiene su lista de tarjetas (categorías).
   - Cada tarjeta tiene sus "tipos" (variantes) con nombre, descripción, precio y foto.
   - Si un tipo no tiene foto, se muestra un espacio con el ícono y "Foto próximamente".
+  - cardPhoto: foto grande de la tarjeta. Sin ella, la tarjeta muestra el ícono sobre rayas.
   - Para quitar una tarjeta de una sucursal, bórrala de la lista de esa sucursal.
   - Una sucursal con la lista vacía muestra "Menú próximamente".
 */
 
 const PHOTO = 'assets/menu-photos/';
+const CARD = 'assets/menu-cards/';
 
 /* ---------- Tipos compartidos (tomados del menú impreso) ---------- */
 
@@ -52,6 +54,7 @@ const MENU_BRANCHES = [
     categories: [
       {
         id: 'empanizados', icon: '🐟', title: 'Fish & Chips y empanizados', tag: 'SIGNATURE', featured: true,
+        cardPhoto: CARD + 'fish-and-chips.webp',
         desc: 'Dorados, crujientes y hechos para repetir.',
         note: 'Acompañados de 1 guarnición y 1 aderezo a tu elección.',
         items: [
@@ -61,7 +64,7 @@ const MENU_BRANCHES = [
         ]
       },
       {
-        id: 'para-empezar', icon: '🌶️', title: 'Para empezar',
+        id: 'para-empezar', icon: '🌶️', title: 'Para empezar', cardPhoto: CARD + 'para-empezar.webp',
         desc: 'Tostones, tostadas y entradas para compartir.',
         items: [
           { name: 'Chiles jalapeños', desc: 'Envueltos con tocino y empanizados.', price: 'Q139', photo: PHOTO + 'chiles-jalapenos.webp' },
@@ -90,13 +93,13 @@ const MENU_BRANCHES = [
         ]
       },
       {
-        id: 'ceviches', icon: '🥣', title: 'Ceviches · Mesa fría',
+        id: 'ceviches', icon: '🥣', title: 'Ceviches · Mesa fría', cardPhoto: CARD + 'ceviches.webp',
         desc: 'Nueve estilos de ceviche en ½ lb y 1 lb.',
         note: CEVICHES_NOTA + ' Extra: paquete de tostadas Q35 · 2 galletas Q10.',
         items: CEVICHES
       },
       {
-        id: 'platillos', icon: '🍲', title: 'Platillos',
+        id: 'platillos', icon: '🍲', title: 'Platillos', cardPhoto: CARD + 'platillos.webp',
         desc: 'Bocado del pescador, canoas, caldos y más.',
         note: 'Los platillos se venden únicamente en restaurante.',
         items: [
@@ -127,7 +130,7 @@ const MENU_BRANCHES = [
         ]
       },
       {
-        id: 'bebidas', icon: '🥤', title: 'Bebidas',
+        id: 'bebidas', icon: '🥤', title: 'Bebidas', cardPhoto: CARD + 'bebidas.webp',
         desc: 'Naturales, sodas artesanales y calientes.',
         compact: true,
         photo: PHOTO + 'bebidas.webp',
@@ -162,7 +165,7 @@ const MENU_BRANCHES = [
         ]
       },
       {
-        id: 'cervezas', icon: '🍺', title: 'Cervezas',
+        id: 'cervezas', icon: '🍺', title: 'Cervezas', cardPhoto: CARD + 'cervezas.webp',
         desc: 'Nacionales, importadas y artesanales.',
         compact: true,
         items: [
@@ -191,17 +194,18 @@ const MENU_BRANCHES = [
     categories: [
       {
         id: 'fish-and-chips', icon: '🐟', title: 'Fish & Chips', tag: 'SIGNATURE', featured: true,
+        cardPhoto: CARD + 'fish-and-chips.webp',
         desc: 'Pescado empanizado, papas crujientes y salsas de la casa.',
         note: 'Acompañado de 1 guarnición y 1 aderezo a tu elección.',
         items: [FISH_AND_CHIPS]
       },
       {
-        id: 'camarones', icon: '🍤', title: 'Camarones',
+        id: 'camarones', icon: '🍤', title: 'Camarones', cardPhoto: CARD + 'camarones.webp',
         desc: 'Camarones dorados con acompañamiento y salsa.',
         items: [CAMARONES_AJILLO, CAMARONES_EMPANIZADOS, CAMARONES_DIABLA, CAMARONES_CHIPOTLE]
       },
       {
-        id: 'ceviches', icon: '🥣', title: 'Ceviches',
+        id: 'ceviches', icon: '🥣', title: 'Ceviches', cardPhoto: CARD + 'ceviches.webp',
         desc: 'Opciones frescas de ½ lb y 1 lb.',
         note: CEVICHES_NOTA,
         items: CEVICHES

@@ -136,17 +136,26 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
   gap:18px;
 }
 .menu-card{
-  min-height:250px;
-  display:flex;flex-direction:column;justify-content:space-between;
-  padding:28px;
+  display:flex;flex-direction:column;
   background:white;
   border:2px solid var(--ink);
   box-shadow:5px 5px 0 rgba(17,16,14,.9);
 }
 .menu-card.featured{background:var(--yellow)}
+.menu-card-media{aspect-ratio:4/3;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--turq)}
+.menu-card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.menu-card-media-empty{
+  display:flex;align-items:center;justify-content:center;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.2) 0 12px,transparent 12px 24px),var(--turq);
+}
+.menu-card-media-empty span{font-size:64px;line-height:1}
+.menu-card-body{
+  flex:1;padding:22px 24px 24px;
+  display:flex;flex-direction:column;align-items:flex-start;
+}
 .menu-icon{font-size:56px}
-.menu-card h3{font-family:Anton,sans-serif;font-size:31px;margin:10px 0}
-.menu-card p{line-height:1.5;color:#444}
+.menu-card h3{font-family:Anton,sans-serif;font-size:28px;line-height:1.05;margin:8px 0 10px}
+.menu-card p{margin:0;line-height:1.5;color:#444}
 .tag{display:inline-block;font-size:10px;font-weight:900;letter-spacing:1.6px;background:var(--ink);color:white;padding:7px 9px}
 
 /* Selector de sucursal */
@@ -173,8 +182,9 @@ button.menu-card{
   animation:card-in .35s ease backwards;animation-delay:calc(var(--i,0) * 45ms);
 }
 button.menu-card:hover,button.menu-card:focus-visible{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
+button.menu-card:hover .menu-card-media img{transform:scale(1.06)}
 button.menu-card:focus-visible{outline:3px solid var(--turq);outline-offset:3px}
-.menu-card-cta{display:inline-block;margin-top:16px;font-size:11px;font-weight:900;letter-spacing:1px;color:var(--turq-dark)}
+.menu-card-cta{display:inline-block;margin-top:auto;padding-top:16px;font-size:11px;font-weight:900;letter-spacing:1px;color:var(--turq-dark)}
 .menu-card.featured .menu-card-cta{color:var(--ink)}
 @keyframes card-in{from{opacity:0;transform:translateY(12px)}}
 .menu-full-link{grid-column:1/-1;justify-self:start;margin-top:10px;font-weight:900;font-size:13px;letter-spacing:1px;border-bottom:2px solid var(--ink);padding-bottom:3px}
