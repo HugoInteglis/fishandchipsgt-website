@@ -21,12 +21,12 @@ const CEVICHE_TABLA = (medio, libra) => ({
 });
 
 const CEVICHES = [
-  { name: 'Aguachile', desc: 'A base de cilantro, limón, cebolla morada en juliana, pepino y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
+  { name: 'Aguachile', desc: 'A base de cilantro, limón, cebolla morada en juliana, pepino y aguacate.', photo: PHOTO + 'aguachile.webp', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Ajonjolí', desc: 'A base de aceite de ajonjolí, salsa soya, pepino, tomate, cebolla en juliana y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Chapín', desc: 'A base de tomate, cebolla, cilantro y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
-  { name: 'Coctel', desc: 'A base de salsa dulce, picante, cebolla, cilantro y aguacate. (Es posible sin picante).', table: CEVICHE_TABLA(['Q70', 'Q89', 'Q89'], ['Q125', 'Q139', 'Q129']) },
-  { name: 'Mazatlán', desc: 'A base de pepino, cebolla morada picada, camote, elote y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
-  { name: 'Mexicano', desc: 'A base de jugos cítricos, cebolla morada en juliana, cilantro, tomate, jalapeño y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
+  { name: 'Coctel', desc: 'A base de salsa dulce, picante, cebolla, cilantro y aguacate. (Es posible sin picante).', photo: PHOTO + 'coctel.webp', table: CEVICHE_TABLA(['Q70', 'Q89', 'Q89'], ['Q125', 'Q139', 'Q129']) },
+  { name: 'Mazatlán', desc: 'A base de pepino, cebolla morada picada, camote, elote y aguacate.', photo: PHOTO + 'ceviche.webp', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
+  { name: 'Mexicano', desc: 'A base de jugos cítricos, cebolla morada en juliana, cilantro, tomate, jalapeño y aguacate.', photo: PHOTO + 'ceviche-rojo.webp', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Veracruzano', desc: 'A base de jugos cítricos, cebolla morada en juliana, cilantro y aguacate.', table: CEVICHE_TABLA(['Q99', 'Q115', 'Q89'], ['Q149', 'Q169', 'Q129']) },
   { name: 'Aguachile negro', desc: 'A base de salsas negras, pepino, cebolla morada y aguacate.', photo: PHOTO + 'aguachile-negro.webp', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] },
   { name: 'Ceviche de macha', desc: 'A base de cebolla morada, cebolla blanca, aguacate, manías y salsa macha.', photo: PHOTO + 'ceviche-macha.webp', options: [['½ lb', 'Q99'], ['1 lb', 'Q149']] }
@@ -66,7 +66,7 @@ const MENU_BRANCHES = [
         items: [
           { name: 'Chiles jalapeños', desc: 'Envueltos con tocino y empanizados.', price: 'Q139', photo: PHOTO + 'chiles-jalapenos.webp' },
           { name: 'Tostones', desc: 'Cama de tostones de la casa con base de mayonesa, pico de gallo y jalapeño, coronado con marisco, aguacate y lechuga.', options: [['Cangrejo', 'Q50'], ['Camarón', 'Q50'], ['Pulpo', 'Q55'], ['Pescado', 'Q55'], ['Super mixto', 'Q69']] },
-          { name: 'Tostada Chapina', desc: 'Base de mayonesa de la casa, cubierta con pico de gallo, jalapeño y coronada con aguacate y lechuga.', options: MARISCOS_TOSTADA },
+          { name: 'Tostada Chapina', desc: 'Base de mayonesa de la casa, cubierta con pico de gallo, jalapeño y coronada con aguacate y lechuga.', photo: PHOTO + 'tostada.webp', options: MARISCOS_TOSTADA },
           { name: 'Tostada Veracruzana', desc: 'Base de aguacate, cubierta con chipotle, pepino y cebolla morada en juliana.', options: MARISCOS_TOSTADA },
           { name: 'Tostada de Aguachile', desc: 'A base de cilantro, limón, cebolla morada en juliana, pepino y aguacate.', options: MARISCOS_TOSTADA },
           { name: 'Tostada de pistacho', desc: 'Base de camarón cubierta de aguacate, chipotle, cebolla morada, serrano y pistacho.', price: 'Q35' },
@@ -130,7 +130,7 @@ const MENU_BRANCHES = [
         id: 'bebidas', icon: '🥤', title: 'Bebidas',
         desc: 'Naturales, sodas artesanales y calientes.',
         compact: true,
-        photo: PHOTO + 'bebidas-naturales.webp',
+        photo: PHOTO + 'bebidas.webp',
         items: [
           { name: 'Limonada natural', desc: 'Agua o soda.', price: 'Q15' },
           { name: 'Naranjada', desc: 'Agua o soda.', price: 'Q15' },

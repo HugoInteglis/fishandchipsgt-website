@@ -258,13 +258,23 @@ body:has(.dish-dialog[open]){overflow:hidden}
 .dish-soon p{color:var(--muted);margin:0}
 
 .story{
-  display:grid;grid-template-columns:1fr 1fr;
+  display:grid;grid-template-columns:1fr 1fr;align-items:start;
   gap:7vw;padding:100px 6vw;
   background:var(--ink);color:white;
 }
 .story h2{font-size:clamp(56px,7vw,105px)}
 .story-right{font-size:20px;line-height:1.7}
 .big-quote{font-family:Anton,sans-serif;font-size:clamp(40px,5vw,78px);line-height:.95;color:var(--yellow)}
+.story-photo{grid-column:1/-1;margin:10px 0 0}
+.story-photo img{
+  width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 70%;display:block;
+  border:3px solid var(--yellow);
+}
+.story-photo figcaption{
+  display:inline-block;margin-top:-3px;padding:9px 14px;
+  font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;
+  background:var(--yellow);color:var(--ink);
+}
 
 .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .location-card{
@@ -474,6 +484,7 @@ body:has(.menu-lightbox[open]){overflow:hidden}
   .dish-grid{grid-template-columns:1fr 1fr}
   .branch-tab-name{font-size:20px}
   .story,.merch,.contact{grid-template-columns:1fr}
+  .story-photo img{aspect-ratio:16/9}
   .merch-visual{min-height:470px}
   .merch-products{grid-template-columns:1fr}
   .catering-box{align-items:start;flex-direction:column}
