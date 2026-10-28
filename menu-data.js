@@ -187,37 +187,8 @@ const MENU_BRANCHES = [
     ]
   },
   {
-    id: 'zona15',
-    number: '02',
-    name: 'Fish2Go',
-    zone: 'Zona 15',
-    categories: [
-      {
-        id: 'fish-and-chips', icon: '🐟', title: 'Fish & Chips', tag: 'SIGNATURE', featured: true,
-        cardPhoto: CARD + 'fish-and-chips.webp',
-        desc: 'Pescado empanizado, papas crujientes y salsas de la casa.',
-        note: 'Acompañado de 1 guarnición y 1 aderezo a tu elección.',
-        items: [FISH_AND_CHIPS]
-      },
-      {
-        id: 'camarones', icon: '🍤', title: 'Camarones', cardPhoto: CARD + 'camarones.webp',
-        desc: 'Camarones dorados con acompañamiento y salsa.',
-        items: [CAMARONES_AJILLO, CAMARONES_EMPANIZADOS, CAMARONES_DIABLA, CAMARONES_CHIPOTLE]
-      },
-      {
-        id: 'ceviches', icon: '🥣', title: 'Ceviches', cardPhoto: CARD + 'ceviches.webp',
-        desc: 'Opciones frescas de ½ lb y 1 lb.',
-        note: CEVICHES_NOTA,
-        items: CEVICHES
-      },
-      { id: 'chicken-fingers', icon: '🍗', title: 'Chicken Fingers', desc: 'Tiernos por dentro, crujientes por fuera.', items: [] },
-      { id: 'signature-burger', icon: '🍔', title: 'Signature Burger', desc: 'Una hamburguesa con identidad Fish.', items: [] },
-      { id: 'tostitos', icon: '🌶️', title: 'Tostitos con Camarón', desc: 'Pico de gallo, camarón y mucho crunch.', items: [] }
-    ]
-  },
-  {
     id: 'antigua',
-    number: '03',
+    number: '02',
     name: 'The Court',
     zone: 'Antigua',
     categories: []

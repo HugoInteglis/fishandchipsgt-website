@@ -4,15 +4,19 @@ Lo común a todos los clientes está en el `CLAUDE.md` de la carpeta padre.
 
 ## Negocio
 - Restaurante de mariscos y street food en Guatemala: fish and chips, camarones, ceviches.
-- Tres sucursales (ver abajo). Hacen delivery a Zona 15 y Zona 16.
+- Dos sucursales (ver abajo). Hacen delivery a Zona 15 y Zona 16.
 - El cliente pasa el material por WhatsApp y carpetas de Google Drive.
 
 ## Sucursales
 | # | Nombre | Zona | Menú en la web | Estado |
 |---|---|---|---|---|
-| 01 | Centro San Isidro | Zona 16 | El del PDF/revista (9 categorías) + `menu-zona16.html` | Abierta. En PedidosYa |
-| 02 | Fish2Go | Zona 15 | 6 tarjetas (Fish & Chips, Camarones, Ceviches, Chicken Fingers, Signature Burger, Tostitos) | Fotos del local ya integradas |
-| 03 | The Court | Antigua | Vacío → "Menú próximamente" | Sin menú propio todavía |
+| 01 | Centro San Isidro | Zona 16 | El del PDF/revista (9 categorías) + `menu-zona16.html` | Abierta. En PedidosYa. Fotos del local integradas |
+| 02 | The Court | Antigua | Vacío → "Menú próximamente" | Sin menú propio todavía |
+
+> **Zona 15 (Fish2Go) nunca llegó a abrir** (asaltaron el local) y se quitó de la web en
+> octubre de 2026. Las fotos del local que nos pasaron eran de **Zona 16**, no de Zona 15.
+> `menu-zona15.html` quedó como redirección a `index.html#menu` por si alguien tiene el enlace.
+> El delivery **sí** sigue cubriendo Zona 15 y Zona 16 (sale de Zona 16): pendiente confirmarlo.
 
 > **Ojo:** la revista/PDF es de **Zona 16**, no de Zona 15. El cliente ya nos corrigió una vez
 > porque los habíamos puesto al revés.
@@ -28,7 +32,6 @@ Lo común a todos los clientes está en el `CLAUDE.md` de la carpeta padre.
 - **Nada inventado.** Platillos sin datos reales muestran "Más opciones próximamente" o
   "Foto próximamente"; nunca se rellenan con datos de otro platillo o de otra sucursal.
 - Los tostitos **no** son lo mismo que las tostadas (el cliente ya nos lo corrigió).
-- Los precios de Zona 15 todavía son los del menú de Zona 16: **pueden no coincidir**.
 
 ## Decisiones de diseño
 - Identidad del cliente, respetarla: turquesa `#0a9ab4`, amarillo `#ffca03`, crema `#f6f1e7`,
@@ -59,7 +62,7 @@ Lo común a todos los clientes está en el `CLAUDE.md` de la carpeta padre.
 - `menu-antigua.html` — placeholder.
 - `assets/menu-zona16/` revista · `assets/menu-photos/` fotos de cada platillo (ventana de
   detalle) · `assets/menu-cards/` foto grande de cada tarjeta de categoría ·
-  `assets/merch/` camisetas · `assets/local-zona15/` local · `assets/brand/` logo original.
+  `assets/merch/` camisetas · `assets/local-zona16/` local · `assets/brand/` logo original.
 - **Antes de asignar una foto, mírala.** Ya pasó una vez que una foto de ceviche quedó publicada
   como "camarones empanizados" por fiarse del número de archivo.
 - `Menú Fish and Chips2026.pdf` está en `.gitignore` (pesa 35 MB).
@@ -71,11 +74,11 @@ Lo común a todos los clientes está en el `CLAUDE.md` de la carpeta padre.
 ## Pendientes (hay que pedírselo al cliente)
 - [ ] Número de WhatsApp real (`wa.me/` está vacío) y confirmar redes (@fishandchipsgt).
 - [ ] Horarios y teléfono de cada sucursal.
-- [ ] Dirección exacta de Zona 15 y de Antigua → activar sus botones de Google Maps y Waze.
+- [ ] Confirmar si el delivery sigue llegando a Zona 15 ahora que esa sucursal no abrió.
+- [ ] Fotos de: al ajillo, guarniciones y postres (son las tarjetas que siguen con ícono).
+- [ ] Dirección exacta de Antigua → activar sus botones de Google Maps y Waze.
 - [ ] Menú propio de Antigua.
-- [ ] Lista de platillos y precios reales de Zona 15.
-- [ ] Variantes de Chicken Fingers, Signature Burger y Tostitos con Camarón.
 - [ ] Precios y tallas de las camisetas; dónde se compran.
-- [ ] Fotos del local de Zona 16 y de Antigua.
+- [ ] Foto del local de Antigua.
 - [ ] Confirmar que "The Court" es el nombre correcto de la sucursal de Antigua.
 - [ ] Píxel de Meta.

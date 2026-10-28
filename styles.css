@@ -160,7 +160,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset
 
 /* Selector de sucursal */
 .branch-label{margin:0 0 12px;font-weight:900;font-size:11px;letter-spacing:2px;color:var(--muted)}
-.branch-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:34px}
+.branch-tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px;margin-bottom:34px}
 .branch-tab{
   display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:baseline;
   padding:18px 22px;text-align:left;font:inherit;color:var(--ink);cursor:pointer;
@@ -286,7 +286,7 @@ body:has(.dish-dialog[open]){overflow:hidden}
   background:var(--yellow);color:var(--ink);
 }
 
-.location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.location-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px}
 .location-card{
   display:flex;flex-direction:column;
   border:2px solid var(--ink);background:white;box-shadow:5px 5px 0 rgba(17,16,14,.9);
