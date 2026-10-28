@@ -57,8 +57,11 @@ Lo común a todos los clientes está en el `CLAUDE.md` de la carpeta padre.
 - `menu-zona16.html` — la revista página por página, con visor y zoom.
 - `menu-zona15.html` — redirección a `index.html?sucursal=zona15#menu` (enlace viejo).
 - `menu-antigua.html` — placeholder.
-- `assets/menu-zona16/` revista · `assets/menu-photos/` platillos · `assets/merch/` camisetas ·
-  `assets/local-zona15/` local · `assets/brand/` logo original.
+- `assets/menu-zona16/` revista · `assets/menu-photos/` fotos de cada platillo (ventana de
+  detalle) · `assets/menu-cards/` foto grande de cada tarjeta de categoría ·
+  `assets/merch/` camisetas · `assets/local-zona15/` local · `assets/brand/` logo original.
+- **Antes de asignar una foto, mírala.** Ya pasó una vez que una foto de ceviche quedó publicada
+  como "camarones empanizados" por fiarse del número de archivo.
 - `Menú Fish and Chips2026.pdf` está en `.gitignore` (pesa 35 MB).
 
 ### Marcas de git para revertir
